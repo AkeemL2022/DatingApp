@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:background="#c58917">
+
+        <!--COMPLETED Call this section 'Display'-->
+        <TextView
+            android:id="@+id/DisplaySec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ab7613"
+            android:fontFamily="sans-serif-black"
+            android:paddingTop="7dp"
+            android:text="DISPLAY"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/MatchPicture"
+            android:layout_width="118dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/DisplaySec"/>
+
+        <Button
+            android:id="@+id/UploadImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="UPLOAD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MatchPicture"
+            app:layout_constraintTop_toTopOf="@+id/MatchPicture" />
+
+        <EditText
+            android:id="@+id/MatchName"
+            android:layout_width="176dp"
+            android:layout_height="39dp"
+            android:ems="10"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/UploadImg"
+            app:layout_constraintStart_toStartOf="@+id/UploadImg"
+            app:layout_constraintTop_toBottomOf="@+id/UploadImg" />
+
+        <EditText
+            android:id="@+id/MatchNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Number"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@id/MatchCPassword"/>
+
+        <TextView
+            android:id="@+id/MatchGendertxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="Your Gender"
+            app:layout_constraintStart_toStartOf="@+id/MatchName"
+            app:layout_constraintTop_toBottomOf="@+id/MatchName" />
+
+        <TextView
+            android:id="@+id/MatchAgetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Your Age"
+            app:layout_constraintEnd_toEndOf="@+id/MatchName"
+            app:layout_constraintStart_toEndOf="@+id/MatchGendertxt"
+            app:layout_constraintTop_toBottomOf="@+id/MatchName" />
+
+        <Spinner
+            android:id="@+id/MatchGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="155dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/MatchGendertxt"
+            app:layout_constraintTop_toBottomOf="@id/MatchGendertxt" />
+
+        <Spinner
+            android:id="@+id/MatchAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/MatchGender"
+            app:layout_constraintStart_toEndOf="@id/MatchGender"
+            app:layout_constraintTop_toTopOf="@id/MatchGender" />
+
+        <!--COMPLETED Switch the contact with the Bio-->
+        <!--COMPLETED Call this section 'contact'-->
+
+        <TextView
+            android:id="@+id/Contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ab7613"
+            android:paddingTop="7dp"
+            android:text="CONTACT"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/MateGender"/>
+
+        <EditText
+            android:id="@+id/MatchEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:layout_constraintTop_toBottomOf="@+id/Contact"/>
+
+        <EditText
+            android:id="@+id/MatchPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            app:layout_constraintTop_toBottomOf="@id/MatchEmail" />
+
+        <EditText
+            android:id="@+id/MatchCPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Confirm Password"
+            app:layout_constraintTop_toBottomOf="@id/MatchPassword" />
+
+        <!--COMPLETED Add Box shape -->
+        <!--COMPLETED Make text fit inside box-->
+        <!--TODO Search how to use ScrollView with in a ScrollView -->
+        <!--COMPLETED call this section the 'Biography'-->
+        <TextView
+            android:id="@+id/Biography"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingTop="7dp"
+            android:background="#ab7613"
+            android:text="ABOUT YOU"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/MatchGender"/>
+
+
+
+
+        <!--COMPLETED Switch the Bio with the contact-->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/MatchBio"
+            android:layout_width="350dp"
+            android:layout_height="188dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint=" Please tell me about yourself\n "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Biography"/>
+
+        <!--COMPLETED make a seeking section called "Looking for"-->
+        <TextView
+            android:id="@+id/LookingFor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ab7613"
+            android:layout_marginTop="4dp"
+            android:paddingTop="7dp"
+            android:text="LOOKING FOR"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MatchBio"/>
+
+        <TextView
+            android:id="@+id/MateGenderTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:text="Seeking Gender:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LookingFor" />
+
+        <TextView
+            android:id="@+id/MateAgeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:text="Seeking Age:"
+            app:layout_constraintBottom_toBottomOf="@+id/MateGenderTxt"
+            app:layout_constraintStart_toEndOf="@id/MateGenderTxt"
+            app:layout_constraintTop_toTopOf="@+id/MateGenderTxt" />
+
+        <Spinner
+            android:id="@+id/MateGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/MateGenderTxt"
+            app:layout_constraintStart_toStartOf="@id/MateGenderTxt"
+            app:layout_constraintTop_toBottomOf="@id/MateGenderTxt" />
+
+        <Spinner
+            android:id="@+id/MateAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/MateAgeTxt"
+            app:layout_constraintStart_toStartOf="@+id/MateAgeTxt"
+            app:layout_constraintTop_toBottomOf="@+id/MateAgeTxt" />
+
+        <!--COMPLETED call this section 'Agreement'-->
+        <TextView
+            android:id="@+id/Agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="#ab7613"
+            android:paddingTop="7dp"
+            android:text="AGREEMENT"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/MatchNumber"/>
+
+        <!--COMPLETED get rid of the guide line-->
+        <!--COMPLETED make the text width match_parent-->
+
+        <TextView
+            android:id="@+id/Boxshape2"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/boxshapeinside"
+            app:layout_constraintTop_toBottomOf="@+id/Agreement"/>
+
+        <LinearLayout
+            android:id="@+id/LinearScrollAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Agreement">
+            <ScrollView
+                android:layout_width="390dp"
+                android:layout_height="50dp">
+
+                <!--COMPLETED Add Box shape-->
+                <!--COMPLETED make text constraint to Box shape-->
+                <!--TODO Search how to use ScrollView with in a ScrollView -->
+                <TextView
+                    android:id="@+id/MatchAgreement"
+                    android:layout_width="363dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="By creating a GoodOnes account or by using any GoodOnes service, whether through a mobile device, mobile application or computer (collectively, the “Service”) you agree to be bound by (i) these Terms of Use.  If you do not accept and agree to be bound by all of the terms of this Agreement, you should not access or use the Service."
+                    app:layout_constraintEnd_toStartOf="@+id/LinearScrollAgreement"
+                    app:layout_constraintTop_toBottomOf="@id/LinearScrollAgreement" />
+             </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/MatchAgreetxtForBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="I Agree to the Agreement of GoodOnes"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LinearScrollAgreement" />
+
+        <CheckBox
+            android:id="@+id/MatchAgreeBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MatchAgreetxtForBox" />
+
+        <Button
+            android:id="@+id/RegisterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="REGISTER"
+            app:layout_constraintStart_toEndOf="@id/GoodOnesLogo"
+            app:layout_constraintTop_toTopOf="@id/GoodOnesLogo"/>
+
+        <TextView
+            android:id="@+id/CustomerServiceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegisterBtn" />
+
+        <Spinner
+            android:id="@+id/CustomerService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/CustomerServiceTxt"
+            app:layout_constraintStart_toStartOf="@id/CustomerServiceTxt"
+            app:layout_constraintTop_toBottomOf="@+id/CustomerServiceTxt" />
+
+
+        <ImageView
+            android:id="@+id/GoodOnesLogo"
+            android:layout_width="126dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="30dp"
+            android:src="@mipmap/quickonesbackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/MatchAgreeBox" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

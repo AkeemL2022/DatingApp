@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".goodones_page2"
+    android:background="#c58917">
+
+    <ImageView
+        android:id="@+id/ProfilePic2"
+        android:layout_width="208dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="5dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/requirementtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="REQUIREMENTS"
+        android:paddingTop="7dp"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:background="#ab7613"
+        app:layout_constraintEnd_toEndOf="@+id/ProfilePic2"
+        app:layout_constraintStart_toStartOf="@+id/ProfilePic2"
+        app:layout_constraintTop_toBottomOf="@+id/ProfilePic2" />
+
+    <TextView
+        android:id="@+id/editInfotxt"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:hint="Choose what you would like to edit"
+        android:textAlignment="center"
+        android:paddingTop="15dp"
+        android:background="#B4F9A5"
+        app:layout_constraintTop_toBottomOf="@id/requirementtxt"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/requirerecycler"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editInfotxt" />
+
+    <Button
+        android:id="@+id/Matchingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="MATCH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requirerecycler" />
+
+    <Spinner
+        android:id="@+id/DeleteAccountSpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/AccountpgTwoTxt"
+        app:layout_constraintStart_toStartOf="@+id/AccountpgTwoTxt"
+        app:layout_constraintTop_toBottomOf="@+id/AccountpgTwoTxt" />
+
+    <Spinner
+        android:id="@+id/CSSpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/CustomerServicepgTwoTxt"
+        app:layout_constraintStart_toStartOf="@+id/CustomerServicepgTwoTxt"
+        app:layout_constraintTop_toBottomOf="@+id/CustomerServicepgTwoTxt" />
+
+    <TextView
+        android:id="@+id/CustomerServicepgTwoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="80dp"
+        android:text="CONTACT"
+        app:layout_constraintStart_toEndOf="@+id/AccountpgTwoTxt"
+        app:layout_constraintTop_toBottomOf="@+id/Matchingbutton" />
+
+    <TextView
+        android:id="@+id/AccountpgTwoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="ACCOUNT"
+        app:layout_constraintEnd_toStartOf="@+id/Matchingbutton"
+        app:layout_constraintTop_toBottomOf="@+id/Matchingbutton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c58917"
+    tools:context=".goodones_page3">
+
+    <ImageView
+        android:id="@+id/ProfilePic3"
+        android:layout_width="394dp"
+        android:layout_height="367dp"
+        android:layout_marginBottom="150dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ic_launcher"/>
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:hint="  What do you like about this person"
+        android:gravity="top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/popupchatbox"/>
+
+
+
+    <TextView
+        android:id="@+id/DisplayTxt"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="   Jimmy, 26"
+        android:textSize="30dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="422dp" />
+
+    <Button
+        android:id="@+id/BadOnebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="BAD ONE"
+        android:textColor="#FAF61B"
+        app:layout_constraintEnd_toStartOf="@+id/Acceptbtn"
+        app:layout_constraintStart_toEndOf="@+id/Declinebtn"
+        app:layout_constraintTop_toTopOf="@+id/Declinebtn" />
+
+    <Button
+        android:id="@+id/Declinebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#BE1F35"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="Decline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayTxt" />
+
+    <Button
+        android:id="@+id/Acceptbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FF7F"
+        android:layout_marginEnd="15dp"
+        android:text="ACCEPT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BadOnebtn" />
+
+    <Spinner
+        android:id="@+id/Deletepg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/AccountpgTwoTxtpg3"
+        app:layout_constraintStart_toStartOf="@+id/AccountpgTwoTxtpg3"
+        app:layout_constraintTop_toBottomOf="@+id/AccountpgTwoTxtpg3" />
+
+    <Spinner
+        android:id="@+id/CSSpinpg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/CustomerServicepgThreeTxt"
+        app:layout_constraintStart_toStartOf="@+id/CustomerServicepgThreeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/CustomerServicepgThreeTxt" />
+
+
+    <Button
+        android:id="@+id/Gobackbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="GO BACK"
+        app:layout_constraintBottom_toTopOf="@+id/Deletepg3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CustomerServicepgThreeTxt" />
+
+    <TextView
+        android:id="@+id/CustomerServicepgThreeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="CONTACT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/AccountpgTwoTxtpg3" />
+
+    <TextView
+        android:id="@+id/AccountpgTwoTxtpg3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="ACCOUNT"
+        app:layout_constraintEnd_toStartOf="@+id/CustomerServicepgThreeTxt"
+        app:layout_constraintStart_toEndOf="@+id/Gobackbtn"
+        app:layout_constraintTop_toBottomOf="@+id/BadOnebtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
